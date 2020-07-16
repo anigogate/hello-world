@@ -1,0 +1,11 @@
+C:\Ani\My Projects\Math Practise\Math Practise\bin\Release\question-correct.wav
+C:\Ani\My Projects\Math Practise\Math Practise\bin\Release\Math Practise.exe.config
+C:\Ani\My Projects\Math Practise\Math Practise\bin\Release\Math Practise.exe
+C:\Ani\My Projects\Math Practise\Math Practise\bin\Release\Math Practise.pdb
+C:\Ani\My Projects\Math Practise\Math Practise\obj\Release\Math_Practise.Form1.resources
+C:\Ani\My Projects\Math Practise\Math Practise\obj\Release\Math_Practise.Properties.Resources.resources
+C:\Ani\My Projects\Math Practise\Math Practise\obj\Release\Math Practise.csproj.GenerateResource.cache
+C:\Ani\My Projects\Math Practise\Math Practise\obj\Release\Math Practise.csproj.CoreCompileInputs.cache
+C:\Ani\My Projects\Math Practise\Math Practise\obj\Release\Math Practise.exe
+C:\Ani\My Projects\Math Practise\Math Practise\obj\Release\Math Practise.pdb
+C:\Ani\My Projects\Math Practise\Math Practise\obj\Release\Math Practise.csprojAssemblyReference.cache
