@@ -111,9 +111,9 @@
             this.lblHeader.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblHeader.Location = new System.Drawing.Point(209, 36);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(151, 29);
+            this.lblHeader.Size = new System.Drawing.Size(165, 29);
             this.lblHeader.TabIndex = 6;
-            this.lblHeader.Text = "Go Aadit Go";
+            this.lblHeader.Text = "Go Aadit Go!!";
             // 
             // lblSummary
             // 
