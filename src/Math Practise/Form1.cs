@@ -78,7 +78,7 @@ namespace Math_Practise
                 var greater = Math.Max(question.First, question.Second);
                 var lesser = Math.Min(question.First, question.Second);
 
-                if (questions.Count < 80)
+                if (questions.Count < 85)
                 {                    
                     question.First = greater;
                     question.Second = lesser;
