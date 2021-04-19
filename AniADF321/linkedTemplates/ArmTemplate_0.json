@@ -135,6 +135,37 @@
 				"[concat(variables('factoryId'), '/datasets/InputDataSet')]",
 				"[concat(variables('factoryId'), '/datasets/OutputDataSet')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/CopyTrigger')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "CopyPipeline",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 1,
+						"startTime": "2021-04-19T08:38:00Z",
+						"endTime": "2021-04-20T08:38:00Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/CopyPipeline')]"
+			]
 		}
 	]
 }
