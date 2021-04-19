@@ -1,0 +1,18 @@
+{
+	"name": "Test111",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorageLinkedService1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "output",
+				"container": "adftutorial"
+			}
+		}
+	}
+}
