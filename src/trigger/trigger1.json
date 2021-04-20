@@ -10,7 +10,7 @@
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"name": "/path/filename1"
+					"query": "SELECT * FROM source LIMIT 8"
 				}
 			}
 		],
