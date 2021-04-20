@@ -14,6 +14,10 @@
 		"AzureStorageLinkedService1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
+		},
+		"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
+			"type": "string",
+			"defaultValue": "/path/filename1"
 		}
 	},
 	"variables": {
@@ -50,26 +54,6 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('AzureStorageLinkedService1_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/trigger1')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Minute",
-						"interval": 15,
-						"startTime": "2021-04-20T13:31:00Z",
-						"timeZone": "UTC"
-					}
 				}
 			},
 			"dependsOn": []
@@ -253,6 +237,39 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/InputDataSet')]",
 				"[concat(variables('factoryId'), '/datasets/OutputDataSet')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "DatabrickParameterPipeline",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"name": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_name')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 6,
+						"startTime": "2021-04-20T13:31:00Z",
+						"endTime": "2021-04-21T14:59:27Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/DatabrickParameterPipeline')]"
 			]
 		},
 		{

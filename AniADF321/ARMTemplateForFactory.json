@@ -14,6 +14,10 @@
 		"AzureStorageLinkedService1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
+		},
+		"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
+			"type": "string",
+			"defaultValue": "/path/filename1"
 		}
 	},
 	"variables": {
@@ -231,19 +235,32 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "DatabrickParameterPipeline",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"name": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_name')]"
+						}
+					}
+				],
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Minute",
-						"interval": 15,
+						"frequency": "Hour",
+						"interval": 6,
 						"startTime": "2021-04-20T13:31:00Z",
+						"endTime": "2021-04-21T14:59:27Z",
 						"timeZone": "UTC"
 					}
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/DatabrickParameterPipeline')]"
+			]
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DatabrickParameterPipeline')]",

@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
 		},
+		"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
+			"type": "string",
+			"defaultValue": "/path/filename1"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -47,6 +51,9 @@
 					},
 					"AzureStorageLinkedService1_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService1_connectionString')]"
+					},
+					"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
+						"value": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_name')]"
 					}
 				}
 			},

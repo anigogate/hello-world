@@ -11,6 +11,9 @@
 		"AzureStorageLinkedService1_connectionString": {
 			"value": ""
 		},
+		"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
+			"value": "/path/filename1"
+		},
 		"containerUri": {
 			"value": ""
 		},
