@@ -15,9 +15,9 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/ani.gogate@gmail.com/adfTutorial/myNotebook",
+					"notebookPath": "/Users/ani.gogate@gmail.com/AniParameterNotebook",
 					"baseParameters": {
-						"input": "@pipeline().parameters.name"
+						"sqlQuery": "SELECT * FROM source LIMIT 5"
 					}
 				},
 				"linkedServiceName": {
@@ -27,7 +27,7 @@
 			}
 		],
 		"parameters": {
-			"name": {
+			"query": {
 				"type": "string"
 			}
 		},
