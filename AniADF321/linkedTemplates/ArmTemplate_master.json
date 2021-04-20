@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "AniADF321"
 		},
+		"AzureDatabricksLinkedService1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksLinkedService1'"
+		},
 		"AzureStorageLinkedService1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
@@ -37,6 +41,9 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AzureDatabricksLinkedService1_accessToken": {
+						"value": "[parameters('AzureDatabricksLinkedService1_accessToken')]"
 					},
 					"AzureStorageLinkedService1_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService1_connectionString')]"
