@@ -15,9 +15,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
 		},
-		"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
+		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
 			"type": "string",
-			"defaultValue": "/path/filename1"
+			"defaultValue": "SELECT * FROM source LIMIT 8"
 		},
 		"containerUri": {
 			"type": "string",
@@ -52,8 +52,8 @@
 					"AzureStorageLinkedService1_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService1_connectionString')]"
 					},
-					"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
-						"value": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_name')]"
+					"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
+						"value": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_query')]"
 					}
 				}
 			},

@@ -11,8 +11,8 @@
 		"AzureStorageLinkedService1_connectionString": {
 			"value": ""
 		},
-		"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
-			"value": "/path/filename1"
+		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
+			"value": "SELECT * FROM source LIMIT 8"
 		},
 		"containerUri": {
 			"value": ""

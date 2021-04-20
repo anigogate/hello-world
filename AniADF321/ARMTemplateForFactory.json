@@ -15,9 +15,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
 		},
-		"trigger1_properties_DatabrickParameterPipeline_parameters_name": {
+		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
 			"type": "string",
-			"defaultValue": "/path/filename1"
+			"defaultValue": "SELECT * FROM source LIMIT 8"
 		}
 	},
 	"variables": {
@@ -243,7 +243,7 @@
 							"type": "PipelineReference"
 						},
 						"parameters": {
-							"name": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_name')]"
+							"query": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_query')]"
 						}
 					}
 				],
@@ -281,9 +281,9 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Users/ani.gogate@gmail.com/adfTutorial/myNotebook",
+							"notebookPath": "/Users/ani.gogate@gmail.com/AniParameterNotebook",
 							"baseParameters": {
-								"input": "@pipeline().parameters.name"
+								"sqlQuery": "SELECT * FROM source LIMIT 5"
 							}
 						},
 						"linkedServiceName": {
@@ -293,7 +293,7 @@
 					}
 				],
 				"parameters": {
-					"name": {
+					"query": {
 						"type": "string"
 					}
 				},
