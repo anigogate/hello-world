@@ -2,7 +2,7 @@
 	"name": "10053",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -19,9 +19,9 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 15,
-				"startTime": "2021-04-22T03:35:00Z",
-				"endTime": "2021-04-22T04:30:00Z",
-				"timeZone": "UTC"
+				"startTime": "2021-04-22T04:15:00",
+				"endTime": "2021-04-22T05:30:00",
+				"timeZone": "Pacific Standard Time"
 			}
 		}
 	}
