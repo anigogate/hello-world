@@ -1,0 +1,18 @@
+{
+	"name": "10053",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2021-04-22T03:35:00Z",
+				"endTime": "2021-04-22T04:30:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
