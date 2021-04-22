@@ -135,39 +135,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/DatabricksPipeline')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "Notebook1",
-						"type": "DatabricksNotebook",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "7.00:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"notebookPath": "/Users/ani.gogate@gmail.com/AniNotebook1"
-						},
-						"linkedServiceName": {
-							"referenceName": "AzureDatabricksLinkedService1",
-							"type": "LinkedServiceReference"
-						}
-					}
-				],
-				"annotations": []
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricksLinkedService1')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/InputDataSet')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -253,7 +220,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -317,7 +284,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Stopped",
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -334,9 +301,9 @@
 					"recurrence": {
 						"frequency": "Minute",
 						"interval": 15,
-						"startTime": "2021-04-22T03:35:00Z",
-						"endTime": "2021-04-22T04:30:00Z",
-						"timeZone": "UTC"
+						"startTime": "2021-04-22T04:55:00",
+						"endTime": "2021-04-22T06:30:00",
+						"timeZone": "Pacific Standard Time"
 					}
 				}
 			},
@@ -350,7 +317,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Stopped",
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -367,9 +334,9 @@
 					"recurrence": {
 						"frequency": "Minute",
 						"interval": 15,
-						"startTime": "2021-04-22T03:35:00Z",
-						"endTime": "2021-04-22T04:30:00Z",
-						"timeZone": "UTC"
+						"startTime": "2021-04-22T04:55:00",
+						"endTime": "2021-04-22T06:30:00",
+						"timeZone": "Pacific Standard Time"
 					}
 				}
 			},
