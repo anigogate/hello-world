@@ -10,7 +10,7 @@
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"query": "SELECT * FROM source LIMIT 27"
+					"query": "SELECT * FROM source LIMIT 37"
 				}
 			}
 		],
