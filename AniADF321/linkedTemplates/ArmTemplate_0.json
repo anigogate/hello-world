@@ -15,10 +15,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
 		},
-		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
-			"type": "string",
-			"defaultValue": "SELECT * FROM source LIMIT 8"
-		},
 		"10035_properties_DatabrickParameterPipeline_parameters_query": {
 			"type": "string",
 			"defaultValue": "SELECT * FROM source LIMIT 37"
@@ -26,6 +22,10 @@
 		"10053_properties_DatabrickParameterPipeline_parameters_query": {
 			"type": "string",
 			"defaultValue": "SELECT * FROM source LIMIT 27"
+		},
+		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
+			"type": "string",
+			"defaultValue": "SELECT * FROM source LIMIT 8"
 		}
 	},
 	"variables": {
@@ -215,39 +215,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/trigger1')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "DatabrickParameterPipeline",
-							"type": "PipelineReference"
-						},
-						"parameters": {
-							"query": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_query')]"
-						}
-					}
-				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Hour",
-						"interval": 6,
-						"startTime": "2021-04-20T13:31:00Z",
-						"endTime": "2021-04-21T14:59:27Z",
-						"timeZone": "UTC"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/DatabrickParameterPipeline')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/10035')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
@@ -314,12 +281,45 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/CopyTrigger')]",
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
 				"runtimeState": "Stopped",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "DatabrickParameterPipeline",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"query": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_query')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 6,
+						"startTime": "2021-04-20T13:31:00Z",
+						"endTime": "2021-04-21T14:59:27Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/DatabrickParameterPipeline')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/CopyTrigger')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -332,11 +332,11 @@
 				"type": "ScheduleTrigger",
 				"typeProperties": {
 					"recurrence": {
-						"frequency": "Hour",
-						"interval": 1,
-						"startTime": "2021-04-19T08:38:00Z",
-						"endTime": "2021-04-22T08:38:00Z",
-						"timeZone": "UTC"
+						"frequency": "Minute",
+						"interval": 10,
+						"startTime": "2021-04-22T13:00:00",
+						"endTime": "2021-04-23T10:00:00",
+						"timeZone": "Pacific Standard Time"
 					}
 				}
 			},

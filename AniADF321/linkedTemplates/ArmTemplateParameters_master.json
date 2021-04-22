@@ -11,14 +11,14 @@
 		"AzureStorageLinkedService1_connectionString": {
 			"value": ""
 		},
-		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
-			"value": "SELECT * FROM source LIMIT 8"
-		},
 		"10035_properties_DatabrickParameterPipeline_parameters_query": {
 			"value": "SELECT * FROM source LIMIT 37"
 		},
 		"10053_properties_DatabrickParameterPipeline_parameters_query": {
 			"value": "SELECT * FROM source LIMIT 27"
+		},
+		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
+			"value": "SELECT * FROM source LIMIT 8"
 		},
 		"containerUri": {
 			"value": ""

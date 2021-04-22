@@ -15,10 +15,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService1'"
 		},
-		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
-			"type": "string",
-			"defaultValue": "SELECT * FROM source LIMIT 8"
-		},
 		"10035_properties_DatabrickParameterPipeline_parameters_query": {
 			"type": "string",
 			"defaultValue": "SELECT * FROM source LIMIT 37"
@@ -26,6 +22,10 @@
 		"10053_properties_DatabrickParameterPipeline_parameters_query": {
 			"type": "string",
 			"defaultValue": "SELECT * FROM source LIMIT 27"
+		},
+		"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
+			"type": "string",
+			"defaultValue": "SELECT * FROM source LIMIT 8"
 		},
 		"containerUri": {
 			"type": "string",
@@ -60,14 +60,14 @@
 					"AzureStorageLinkedService1_connectionString": {
 						"value": "[parameters('AzureStorageLinkedService1_connectionString')]"
 					},
-					"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
-						"value": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_query')]"
-					},
 					"10035_properties_DatabrickParameterPipeline_parameters_query": {
 						"value": "[parameters('10035_properties_DatabrickParameterPipeline_parameters_query')]"
 					},
 					"10053_properties_DatabrickParameterPipeline_parameters_query": {
 						"value": "[parameters('10053_properties_DatabrickParameterPipeline_parameters_query')]"
+					},
+					"trigger1_properties_DatabrickParameterPipeline_parameters_query": {
+						"value": "[parameters('trigger1_properties_DatabrickParameterPipeline_parameters_query')]"
 					}
 				}
 			},
