@@ -19,8 +19,8 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 15,
-				"startTime": "2021-04-22T04:15:00",
-				"endTime": "2021-04-22T05:30:00",
+				"startTime": "2021-04-22T04:55:00",
+				"endTime": "2021-04-22T06:30:00",
 				"timeZone": "Pacific Standard Time"
 			}
 		}
