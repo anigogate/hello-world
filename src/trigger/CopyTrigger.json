@@ -2,7 +2,7 @@
 	"name": "CopyTrigger",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
@@ -14,11 +14,11 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Hour",
-				"interval": 1,
-				"startTime": "2021-04-19T08:38:00Z",
-				"endTime": "2021-04-22T08:38:00Z",
-				"timeZone": "UTC"
+				"frequency": "Minute",
+				"interval": 10,
+				"startTime": "2021-04-22T13:00:00",
+				"endTime": "2021-04-23T10:00:00",
+				"timeZone": "Pacific Standard Time"
 			}
 		}
 	}
